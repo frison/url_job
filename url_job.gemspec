@@ -8,14 +8,9 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Timothy Frison"]
   s.email       = ["tim@frison.ca"]
-  s.homepage    = "http://frison.ca/"
+  s.homepage    = "http://github.com/frison/url_job"
   s.summary     = %q{A rails engine for creating urls that run jobs}
-  s.description = <<-EOF
-  Need to track if an email was opened? If a link was clicked? If a page was viewed?
-  Too lazy to setup cron (or is it impossible?)?
-
-  Easy -- Just create a url_job that when visited does things (like the above) for you.
-  EOF
+  s.description = s.summary
 
   s.rubyforge_project = "url_job"
 

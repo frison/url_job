@@ -1,6 +1,11 @@
 = UrlJob
 
-Rails gem that provides an engine which allows for creating urls that execute jobs
+Need to track if an email was opened? If a link was clicked? If a page was viewed?
+Too lazy to setup cron (or is it impossible?)?
+
+Easy -- Just create a url_job that when visited does things (like the above) for you.
+
+This is a rails gem that provides an engine which allows for creating urls that execute jobs.
 
 == Install
 

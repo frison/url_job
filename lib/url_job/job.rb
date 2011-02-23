@@ -8,8 +8,6 @@ module UrlJob
       SecureRandom.hex(40)
     end
 
-
-
     validates :handler, :presence => true
 
     class << self

@@ -1,0 +1,7 @@
+0.0.2
+  - Give credit to delayed_job
+  - Change description
+  - Can now generate migrations
+0.0.1
+  - Ability to create jobs
+  - Url redirects / render (text)

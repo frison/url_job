@@ -63,6 +63,9 @@ And embed a image tag like:
 
 Inside some emails to track some email opens
 
+== Thanks
+UrlJob::Job almost exactly a stripped down version of Delayed::Job.
+
 == Licence
 
 Copyright (c) 2011 Timothy Frison

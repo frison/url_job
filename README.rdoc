@@ -13,7 +13,10 @@ This is a rails gem that provides an engine which allows for creating urls that 
 
 == Usage
 
-Lets assume you have an class like the following:
+  rails g url_job
+  rake db:migrate
+
+Now lets assume you have a class like:
 
   class Redirector < Struct.new(:redirect_to)
     def initialize(redirect)
@@ -32,7 +35,7 @@ And visiting:
   http://localhost:3000/uj/#{uj.token}
 
 The result will be deserializing the Redirector job, and calling it's perform method.
-The perform method should return an object that responds to either: 'redirect_to' or 'render', and the corresponding action will occur. The perform method will be passed in a dictionary with the following keys:
+The perform method must return an object that responds to either: 'redirect_to' or 'render', and the corresponding action will occur. The perform method will be passed in a dictionary with the following keys:
   :ip_address => The ip address of the url visitor
   :user_agent => The user agent of the url visitor
   :referrer   => The referrer of the url visitor
@@ -64,7 +67,7 @@ And embed a image tag like:
 Inside some emails to track some email opens
 
 == Thanks
-UrlJob::Job almost exactly a stripped down version of Delayed::Job.
+UrlJob::Job almost exactly a stripped down version of Delayed::Job with a controller
 
 == Licence
 

@@ -32,7 +32,7 @@ By creating a UrlJob using the following:
   uj = UrlJob::Job.from_object(Redirector.new("http://frison.ca"))
 
 And visiting:
-  http://localhost:3000/uj/#{uj.token}
+  http://localhost:3000/uj/#{uj.token} or http://localhost:3000/uj/#{uj.path} or #{uj.url} (assuming default_url_options[:host] is setup)
 
 The result will be deserializing the Redirector job, and calling it's perform method.
 The perform method must return an object that responds to either: 'redirect_to' or 'render', and the corresponding action will occur. The perform method will be passed in a dictionary with the following keys:

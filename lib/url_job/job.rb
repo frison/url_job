@@ -2,6 +2,8 @@ module UrlJob
   require 'uniquify'
 
   class Job < ActiveRecord::Base
+    include ActionController::UrlWriter
+
     set_table_name :url_jobs
 
     uniquify :token do
@@ -18,6 +20,14 @@ module UrlJob
 
         create(:payload_object => object)
       end
+    end
+
+    def path
+      url_job_path(:token => self.token)
+    end
+
+    def url
+      url_job_url(:token => self.token)
     end
 
     def limit_reached?
@@ -49,6 +59,5 @@ module UrlJob
       raise DeserializationError,
             "UrlJob failed to load: #{e.message}. Handler: #{handler.inspect}"
     end
-
   end
 end

@@ -27,7 +27,11 @@ module UrlJob
     end
 
     def url
-      url_job_url(:token => self.token)
+      url_job_url(:token => self.token, :host => host)
+    end
+
+    def host
+      ActionMailer::Base.default_url_options[:host]
     end
 
     def limit_reached?
